@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: whitesmoke;
+  font-family: Georgia, serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.container{
+  width: 900px;
+  height: 100%;
+  background-color: rgb(243, 237, 237);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  gap: 50px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.image{
+  width: 50%;
+  height: 420px;
+  padding: 35px;
+  background-image: url("/asset/image/dragon.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 40px 0px 10px 20px;
+  border-radius: 10px;
+}
+/*img{
+  width: 100%;
+}*/
+
+.calendar{
+  width: 50%;
+  height: 100%;
+  display:inline-grid;
+  justify-content:center;
+  align-items:center;
+  background: transparent;  
+  padding:20px;
+  border-radius:5px;
+
+  .month{
+    font-size:30px;
+    font-weight:600;
+    margin-left: 10px;
+    color: steelblue;
+    .year{
+      font-weight:600;
+      margin-left:10px;
+    }
+    
+    .nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+      color:#0a3d62;
+      width:40px;
+      height:40px;
+      border-radius:40px;
+      transition-duration:.2s;
+      position:relative;
+      
+      &:hover{
+        background:#eee;
+      }
+    }
+  }
+  
+  .days{
+    display: grid;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns: repeat(7, 1fr);
+    color:#999;
+    font-weight:600;
+    margin-bottom:15px;
+    
+    span{
+      width:50px;
+      justify-self:center;
+      align-self:center;
+      text-align:center;
+    }
+  }
+  
+  .dates{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+    button{
+      cursor:pointer;
+      outline:0;
+      border:0;
+      background:transparent;
+      font-family: Georgia, serif;
+      font-size:16px;
+      font-weight: bold;
+      justify-self:center;
+      align-self:center;
+      width:50px;
+      height:50px;
+      border-radius:50px;
+      margin:2px;
+      transition-duration:.2s;
+      background-color: whitesmoke;
+      &.border{
+        box-shadow:inset 0px 0px 0px 0.1px #999;
+        color: #999;
+      }
+      
+      &:hover{
+        background: rgb(199, 234, 235);
+      }
+      
+      &:focus{
+        background:#0a3d62;
+        color:#fff;
+        font-weight:600;
+      }
+    }
+  }
+  .dayOff{
+    color: red;
+  }
+}
